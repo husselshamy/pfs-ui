@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import { porscheContentAreaCommunicator } from '@myporsche/content-area-communicator';
 import { PorscheDesignSystemProvider } from '@porsche-design-system/components-react';
