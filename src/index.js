@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { porscheContentAreaCommunicator } from '@myporsche/content-area-communicator';
+import { PorscheDesignSystemProvider } from '@porsche-design-system/components-react';
 
 const onMessage = (event) => {
     console.log('msg received');
@@ -25,7 +26,9 @@ window.addEventListener("message", onMessage);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <PorscheDesignSystemProvider>
+          <App />
+      </PorscheDesignSystemProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
