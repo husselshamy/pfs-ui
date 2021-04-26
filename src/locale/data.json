@@ -11,11 +11,11 @@
     "ACCOUNT_MANAGEMENT_TEXT": "PFS Account Management",
     "SELECT_OPTION_TEXT": "Select one of the options below to manage your account and payments, find responses to the most common questions, or contact the Porsche Financial Services team. To manage your account effortlessly, enroll in Auto Pay and choose paperless statements and never miss a payment.",
     "GENERAL_HEADER_TEXT": "Start Managing Your Account",
-    "Link_My_Account_BUTTON": ">  Link My Account",
-    "Watch_How_To_Videos_BUTTON": ">  Watch How-To Videos",
-    "FAQ_BUTTON": ">  FAQ’s",
-    "Contact_Us_BUTTON": ">  Contact Us",
-    "Lease_BUTTON": "> Lease-end Options",
-    "Manage_Account_BUTTON": "> Manage account"
+    "Link_My_Account_BUTTON": "Link My Account",
+    "Watch_How_To_Videos_BUTTON": "Watch How-To Videos",
+    "FAQ_BUTTON": "FAQ’s",
+    "Contact_Us_BUTTON": "Contact Us",
+    "Lease_BUTTON": "Lease-end Options",
+    "Manage_Account_BUTTON": "Manage account"
   }
 }
