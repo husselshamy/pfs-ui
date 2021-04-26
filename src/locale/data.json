@@ -1,0 +1,21 @@
+{
+  "en_us": {
+    "CREDIT_APPLICATION_TEXT": "Credit Application Status",
+    "APPLICATION_SUBMITTED_TEXT": "Application Submitted",
+    "CREDIT_FOOTER_1_TEXT": "For further information, please contact your dealer:",
+    "CREDIT_FOOTER_2_TEXT": "Porsche Atlanta Perimeter",
+    "CREDIT_FOOTER_3_TEXT": "4006 Carver Drive | Atlanta, GA 30360",
+    "CREDIT_FOOTER_4_TEXT": "404-490-7297",
+    "NO_ACCOUNT_TEXT": "Our records indicate that you have not linked your Porsche Financial Services account with your Porsche ID. This one-time authentication will allow you to manage your Porsche Financial Services account features, including one-time payments, Auto Pay enrollment, and paperless billing statements.\n",
+    "ASSISTANCE_TEXT": "For assistance with how to link your Porsche Financial Services account, watch our How-To Videos.\n",
+    "ACCOUNT_MANAGEMENT_TEXT": "PFS Account Management",
+    "SELECT_OPTION_TEXT": "Select one of the options below to manage your account and payments, find responses to the most common questions, or contact the Porsche Financial Services team. To manage your account effortlessly, enroll in Auto Pay and choose paperless statements and never miss a payment.",
+    "GENERAL_HEADER_TEXT": "Start Managing Your Account",
+    "Link_My_Account_BUTTON": ">  Link My Account",
+    "Watch_How_To_Videos_BUTTON": ">  Watch How-To Videos",
+    "FAQ_BUTTON": ">  FAQ’s",
+    "Contact_Us_BUTTON": ">  Contact Us",
+    "Lease_BUTTON": "> Lease-end Options",
+    "Manage_Account_BUTTON": "> Manage account"
+  }
+}

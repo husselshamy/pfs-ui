@@ -1,25 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from "react";
+import Account from './components/Account';
+import NoAccount from './components/NoAccount';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(props) {
+
+    // const [data, setData] = useState();
+    const [msg, setMsg] = useState();
+    // useEffect ( () => {
+    //     fetch('http://localhost:3000/posts/1')
+    //         .then(res => res.json())
+    //         .then(data => setData(data));
+    // }, []);
+
+    useEffect(() => {
+        const handler = event => {
+            setMsg(event.data.apiKey);
+        }
+        window.addEventListener("message", handler)
+        return () => window.removeEventListener("message", handler)
+    }, []);
+
+    const data =     {
+        "id": 1,
+        "PfsAccountInformation":
+            [
+                {
+                    "accountNumber": msg,
+                    "daysToMaturity": -30,
+                    "paymentDueDate": "2018-05-18T00:00:00.000+0000",
+                    "lastStatementDate": "2018-04-30T00:00:00.000+0000",
+                    "product": "LEASE",
+                    "paperlessPreference": false,
+                    "vin": "WP0AA2A78FL004006",
+                    "showMaturity": true,
+                    "appliedForCredit": true
+                }
+            ]
+    };
+
+    return (
+    <div className="pageLayout">
+        {data && data.PfsAccountInformation && !data.PfsAccountInformation[0].accountNumber && <NoAccount data={data}/>}
+        {data && data.PfsAccountInformation && data.PfsAccountInformation[0].accountNumber && <Account data={data}/>}
     </div>
-  );
+    );
 }
 
 export default App;

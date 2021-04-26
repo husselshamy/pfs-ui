@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "PfsAccountInformation":
+      [
+        {
+          "accountNumber": "*******047",
+          "daysToMaturity": -30,
+          "paymentDueDate": "2018-05-18T00:00:00.000+0000",
+          "lastStatementDate": "2018-04-30T00:00:00.000+0000",
+          "product": "LEASE",
+          "paperlessPreference": false,
+          "vin": "WP0AA2A78FL004006",
+          "showMaturity": true,
+          "appliedForCredit": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "PfsAccountInformation":
+    [
+      {
+        "accountNumber": "*******047",
+        "daysToMaturity": -30,
+        "paymentDueDate": "2018-05-18T00:00:00.000+0000",
+        "lastStatementDate": "2018-04-30T00:00:00.000+0000",
+        "product": "LEASE",
+        "paperlessPreference": false,
+        "vin": "WP0AA2A78FL004006",
+        "showMaturity": true,
+        "appliedForCredit": true
+      },
+      {
+        "accountNumber": "*******047",
+        "daysToMaturity": -30,
+        "paymentDueDate": "2018-05-18T00:00:00.000+0000",
+        "lastStatementDate": "2018-04-30T00:00:00.000+0000",
+        "product": "LEASE",
+        "paperlessPreference": false,
+        "vin": "WP0AA2A78FL004006",
+        "showMaturity": true,
+        "appliedForCredit": false
+      }
+    ]
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

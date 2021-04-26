@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="PFS tile"
+    />
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
+
+  </head>
+  <body>
+    <div id="root">
+       <iframe id="iframe"  sandbox="allow-scripts allow-forms allow-same-origin allow-modals allow-top-navigation" name="iframe" width="100%" scrolling="no" frameborder="0" src="http://localhost:3001/"  style="overflow: hidden; height: 285px; " sandbox="allow-scripts"></iframe>
+    </div>
+      <script type="text/javascript">
+      var testtt = function() {
+          var win = document.getElementById("iframe").contentWindow;
+            var data = {'apiKey': '*******047'};
+            win.postMessage(data, '*');
+          console.log('sent msg to child');
+    }
+    </script>
+    <button onclick="testtt()"></button>
+  </body>
+</html>
