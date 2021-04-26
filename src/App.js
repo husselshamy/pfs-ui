@@ -1,9 +1,7 @@
-import './App.css';
-import React, { useEffect, useState } from "react";
+import './App.scss';
+import React, { /* useEffect, */ useState } from "react";
 import Account from './components/Account';
 import NoAccount from './components/NoAccount';
-import { PHeadline } from '@porsche-design-system/components-react';
-
 function App(props) {
 
     // const [data, setData] = useState();
@@ -14,13 +12,13 @@ function App(props) {
     //         .then(data => setData(data));
     // }, []);
 
-    useEffect(() => {
-        const handler = event => {
-            setMsg(event.data.apiKey);
-        }
-        window.addEventListener("message", handler)
-        return () => window.removeEventListener("message", handler)
-    }, []);
+    // useEffect(() => {
+    //     const handler = event => {
+    //         setMsg(event.data.apiKey);
+    //     }
+    //     window.addEventListener("message", handler)
+    //     return () => window.removeEventListener("message", handler)
+    // }, []);
 
     const data =     {
         "id": 1,
@@ -42,7 +40,6 @@ function App(props) {
 
     return (
     <div className="pageLayout">
-        <PHeadline variant="headline-1">Headline from Porsche Design System</PHeadline>
         {data && data.PfsAccountInformation && !data.PfsAccountInformation[0].accountNumber && <NoAccount data={data}/>}
         {data && data.PfsAccountInformation && data.PfsAccountInformation[0].accountNumber && <Account data={data}/>}
     </div>

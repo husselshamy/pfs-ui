@@ -2,10 +2,11 @@ import React from 'react'
 import CreditApplication from "./CreditApplication";
 import ButtonPanel from "./ButtonPanel";
 import locale from "../locale/data.json";
+import { PContentWrapper } from '@porsche-design-system/components-react';
 
 const Account = ({data}) => {
     return (
-        <div className="container">
+        <PContentWrapper width="fluid">
             <div className="row">
                 <div className="left-text col-sm-12">
                     <p>{locale.en_us.ACCOUNT_MANAGEMENT_TEXT}</p>
@@ -26,7 +27,7 @@ const Account = ({data}) => {
                     <h2>{locale.en_us.SELECT_OPTION_TEXT}</h2>
                 </div>}
             <ButtonPanel data={data} />
-        </div>
+        </PContentWrapper>
     )
 }
 
