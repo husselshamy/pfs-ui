@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useEffect, useState } from "react";
 import Account from './components/Account';
 import NoAccount from './components/NoAccount';
