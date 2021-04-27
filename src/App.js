@@ -1,3 +1,4 @@
+import './App.scss';
 import React, { useEffect, useState } from "react";
 import Account from './components/Account';
 import NoAccount from './components/NoAccount';
@@ -40,7 +41,7 @@ function App(props) {
     };
 
     return (
-    <PContentWrapper>
+    <PContentWrapper width='fluid'>
         {data && data.PfsAccountInformation && !data.PfsAccountInformation[0].accountNumber && <NoAccount data={data}/>}
         {data && data.PfsAccountInformation && data.PfsAccountInformation[0].accountNumber && <Account data={data}/>}
     </PContentWrapper>
