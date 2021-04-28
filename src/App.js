@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Account from './components/Account';
 import NoAccount from './components/NoAccount';
 import { PContentWrapper } from '@porsche-design-system/components-react';
+import {porscheContentAreaCommunicator} from "@myporsche/content-area-communicator";
 
 function App(props) {
 
@@ -40,10 +41,10 @@ function App(props) {
     };
 
     return (
-    <PContentWrapper>
+    <div>
         {data && data.PfsAccountInformation && !data.PfsAccountInformation[0].accountNumber && <NoAccount data={data}/>}
         {data && data.PfsAccountInformation && data.PfsAccountInformation[0].accountNumber && <Account data={data}/>}
-    </PContentWrapper>
+    </div>
     );
 }
 

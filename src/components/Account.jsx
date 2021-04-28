@@ -6,7 +6,7 @@ import { PHeadline, PContentWrapper, PGrid, PGridItem } from '@porsche-design-sy
 
 const Account = ({data}) => {
     return (
-        <PContentWrapper>
+        <div>
             <PGrid className="example-grid">
                 <PGridItem size={6}>
                     <PHeadline>{locale.en_us.ACCOUNT_MANAGEMENT_TEXT}</PHeadline>
@@ -23,8 +23,12 @@ const Account = ({data}) => {
                     </div>}
                 </PGridItem>
             </PGrid>
-            <ButtonPanel data={data} />
-        </PContentWrapper>
+            <PGrid className="example-grid">
+                <PGridItem size={10}>
+                    <ButtonPanel data={data} />
+                </PGridItem>
+            </PGrid>
+        </div>
     )
 }
 

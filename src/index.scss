@@ -2,97 +2,15 @@
 body {
   margin: 0;
   height: fit-content;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-h1 {
-  text-align: left;
-  font-weight: normal;
-}
-
-h2 {
-  text-align: left;
-  font-weight: normal;
-}
-
-.button{
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: left;
-}
-
-a {
-  background-color: #303030;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: left;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 4px 3px;
-  cursor: pointer;
-  position: relative;
-  display: inline-flex;
-  vertical-align: top;
-}
-
-.red{
-  background-color: red;
-}
-
-td {
-  padding: 10px;
-}
-
-.td-left-border {
-  border-left: 1px solid black;
-  text-align: center;
-}
-
-.td-left-border h1 {
-    text-align: center !important;
-  }
-
-.td-left-border h2 {
-    text-align: center !important;
-  }
-
-.payment {
-  color: red;
-  font-weight: bold;
-}
-
-.account-header {
-  font-weight: bold;
-}
-
-.account-parent {
-  display: flex;
-}
-.account {
-  flex: 1;
-}
-
-@media screen and (max-width: 500px) {
-
-  .first,
-  .second,
-  .third {
-    width: 70%;
-  }
+  background-color: transparent;
 }
 
 .center {
   text-align: center;
 }
 
-.left-text {
-  text-align: left;
+PLink {
+  font-size: 20em;
 }
 
 
