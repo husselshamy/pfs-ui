@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Account from './components/Account';
 import NoAccount from './components/NoAccount';
 import { PContentWrapper } from '@porsche-design-system/components-react';
+import {porscheContentAreaCommunicator} from "@myporsche/content-area-communicator";
 
 function App(props) {
 

@@ -2,19 +2,19 @@ import React from 'react'
 import CreditApplication from "./CreditApplication";
 import ButtonPanel from "./ButtonPanel";
 import locale from "../locale/data.json";
-import { PHeadline, PContentWrapper, PGrid, PGridItem } from '@porsche-design-system/components-react';
+import {PHeadline, PContentWrapper, PGrid, PGridItem, PDivider} from '@porsche-design-system/components-react';
 
 
 const NoAccount = ({data}) => {
     return (
-        <PContentWrapper>
+        <div>
             <PGrid className="example-grid">
                 <PGridItem size={6}>
                     <div>
                         <PHeadline>{locale.en_us.GENERAL_HEADER_TEXT}</PHeadline>
                     </div>
                     <div>
-                        <p>{locale.en_us.NO_ACCOUNT_TEXT}</p>
+                        <p>{locale.en_us.NO_ACCOUNT_TEXT}</p><br/>
                         <p>{locale.en_us.ASSISTANCE_TEXT}</p>
                     </div>
                 </PGridItem>
@@ -23,7 +23,7 @@ const NoAccount = ({data}) => {
                 </PGridItem>
             </PGrid>
             <ButtonPanel data={data} />
-        </PContentWrapper>
+        </div>
     )
 }
 

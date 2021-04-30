@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@myporsche/content-area-communicator": "^1.0.0",
+    "@myporsche/content-area-communicator": "^1.0.1",
     "@porsche-design-system/components-react": "^2.0.2",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
