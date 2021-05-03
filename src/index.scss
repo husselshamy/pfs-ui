@@ -1,3 +1,9 @@
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
 
 body {
   margin: 0;
@@ -5,12 +11,41 @@ body {
   background-color: transparent;
 }
 
-.center {
+.accNumber,
+.paymentDue,
+.payment,
+.endDate {
   text-align: center;
 }
 
-PLink {
-  font-size: 20em;
+.payment {
+  color:red;
+  font-weight: bold;
 }
 
+.accNumber {
+  font-weight: bold;
+}
 
+@media (min-width:760px) {
+  .creditAppContainer {
+    border-left: 1px solid #000000;
+  }
+}
+
+.slick-next {
+  right: 20%;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 20%;
+  z-index: 1;
+}
+
+.slick-prev:before {
+  color:#000000;
+}
+.slick-next:before {
+  color:#000000;
+}

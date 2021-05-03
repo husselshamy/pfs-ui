@@ -1,12 +1,12 @@
 import React from 'react'
 import locale from "../locale/data.json";
-import { PDivider } from '@porsche-design-system/components-react';
+import { PHeadline } from '@porsche-design-system/components-react';
 
 const CreditApplication = ({data}) => {
     return (
-        <div>
-            <p>{locale.en_us.CREDIT_APPLICATION_TEXT}</p>
-            <p>{locale.en_us.APPLICATION_SUBMITTED_TEXT}</p>
+        <div className="creditAppContainer" align="center">
+            <PHeadline variant="headline-3" align="center">{locale.en_us.CREDIT_APPLICATION_TEXT}</PHeadline>
+            <PHeadline variant="headline-4" align="center">{locale.en_us.APPLICATION_SUBMITTED_TEXT}</PHeadline>
             <p>{locale.en_us.CREDIT_FOOTER_1_TEXT}</p>
             <p>{locale.en_us.CREDIT_FOOTER_2_TEXT}</p>
             <p>{locale.en_us.CREDIT_FOOTER_3_TEXT}</p>
