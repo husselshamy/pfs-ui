@@ -6,6 +6,8 @@ import {porscheContentAreaCommunicator} from "@myporsche/content-area-communicat
 import locale from "./locale/data.json";
 import ButtonPanel from "./components/ButtonPanel";
 import CreditApplication from "./components/CreditApplication";
+import { ICONS_CDN_BASE_URL, ICONS_MANIFEST } from '@porsche-design-system/assets';
+const iconUrl = `${ICONS_CDN_BASE_URL}/${ICONS_MANIFEST.arrowRight}`;
 
 function App(props) {
 
@@ -50,27 +52,31 @@ function App(props) {
             },
         ]
     };
-    let columnSize = 4;
-    if (!data.PfsAccountInformation[0].appliedForCredit) {
-        columnSize = 12;
-    }
 
-    let accStatus = false;
-    if (data && data.PfsAccountInformation && data.PfsAccountInformation[0].accountNumber) {
-        accStatus = true;
+    let columnSize = 12;
+    let accLinked = false;
+    let creditApplied = false;
+    if (data && data.PfsAccountInformation) {
+        if (data.PfsAccountInformation[0].accountNumber) {
+            accLinked = true;
+        }
+        if (data.PfsAccountInformation[0].appliedForCredit) {
+            columnSize = 4;
+            creditApplied = true;
+        }
     }
 
     return (
     <div>
-        {!accStatus && <PHeadline variant="headline-3">{locale.en_us.GENERAL_HEADER_TEXT}</PHeadline>}
-        {accStatus && <PHeadline variant="headline-3">{locale.en_us.ACCOUNT_MANAGEMENT_TEXT}</PHeadline>}
-        <PGrid className="example-grid">
-            <PGridItem size={{ base: 12, s: columnSize }}>
-                {!accStatus && <NoAccount data={data}/>}
-                {accStatus  && <Account data={data}/>}
+        {!accLinked && <PHeadline variant="headline-3">{locale.en_us.GENERAL_HEADER_TEXT}</PHeadline>}
+        {accLinked && <PHeadline variant="headline-3">{locale.en_us.ACCOUNT_MANAGEMENT_TEXT}</PHeadline>}
+        <PGrid className="pfs-wrapper">
+            <PGridItem className="account-wrapper" size={{ base: 12, s: columnSize }}>
+                {!accLinked && <NoAccount data={data}/>}
+                {accLinked  && <Account data={data}/>}
             </PGridItem>
-            <PGridItem size={{ base: 12, s: columnSize }}>
-                {data.PfsAccountInformation[0].appliedForCredit && <div><CreditApplication data={data}/></div>}
+            <PGridItem className="credit-wrapper" size={{ base: 12, s: columnSize }}>
+                {creditApplied && <CreditApplication data={data}/>}
             </PGridItem>
         </PGrid>
         <ButtonPanel data={data} />

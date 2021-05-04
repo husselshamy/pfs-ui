@@ -1,12 +1,10 @@
 import React from 'react'
 import Slider from 'react-slick'
-import CreditApplication from "./CreditApplication";
-import ButtonPanel from "./ButtonPanel";
 import locale from "../locale/data.json";
-import { PHeadline, PContentWrapper, PGrid, PGridItem, PText } from '@porsche-design-system/components-react';
+import { PText } from '@porsche-design-system/components-react';
 
 const Account = ({data}) => {
-    const Slidersettings = {
+    const SliderSettings = {
         dots: true,
         infinite: true,
         speed: 500,
@@ -14,8 +12,8 @@ const Account = ({data}) => {
         slidesToScroll: 1
     };
     return (
-        <div className="AccContainer">
-            <Slider {...Slidersettings}>
+        <div>
+            <Slider {...SliderSettings}>
                 {data.PfsAccountInformation.map((acc, index) => (
                     <div key={index}>
                         <p className="accNumber">Account: {acc.accountNumber}</p>
