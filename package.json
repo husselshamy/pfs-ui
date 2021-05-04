@@ -5,7 +5,9 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@myporsche/content-area-communicator": "^1.0.1",
+    "@porsche-design-system/assets": "^3.1.0",
     "@porsche-design-system/components-react": "^2.0.2",
+    "@porsche-design-system/utilities": "^4.0.0",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",

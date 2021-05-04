@@ -10,7 +10,7 @@ const ButtonPanel = ({data}) => {
     return (
         <PGrid className="ButtonPanel">
             <PGridItem size={12}>
-                <PButtonGroup>
+                <PButtonGroup direction={{base: 'column', s: 'row'}}>
                     {!accStatus && <PLink  variant="primary" href="https://pfsaccount.porscheusa.com/AutoService/accountEnrollment">{locale.en_us.Link_My_Account_BUTTON}</PLink>}
                     {accStatus && <PLink  variant="primary" href="https://pfsaccount.porscheusa.com/AutoService/accountEnrollment">{locale.en_us.Manage_Account_BUTTON}</PLink>}
                     {!accStatus && <PLink href="https://pfsaccount.porscheusa.com/AutoService/helpCenterFaqs">{locale.en_us.Watch_How_To_Videos_BUTTON}</PLink>}

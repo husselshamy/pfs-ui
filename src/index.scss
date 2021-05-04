@@ -1,51 +1,98 @@
 @import '~slick-carousel/slick/slick';
 @import '~slick-carousel/slick/slick-theme';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/brands';
-@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@porsche-design-system/utilities/scss';
 
 body {
   margin: 0;
   height: fit-content;
   background-color: transparent;
+  font-family: $p-font-family;
+  font-size: $p-font-size-12;
 }
 
-.accNumber,
-.paymentDue,
-.payment,
-.endDate {
+.account-wrapper,
+.credit-wrapper {
   text-align: center;
 }
 
-.payment {
-  color:red;
-  font-weight: bold;
-}
-
-.accNumber {
-  font-weight: bold;
-}
-
-@media (min-width:760px) {
-  .creditAppContainer {
-    border-left: 1px solid #000000;
+.credit-wrapper {
+  padding: $p-spacing-16;
+  .creditContent {
+    border-top: 1px solid $p-color-neutral-contrast-medium;
+    padding: $p-spacing-8;
   }
 }
 
+@media (min-width:760px) {
+  .credit-wrapper {
+    padding: 0;
+    .creditContent {
+      border-left: 1px solid $p-color-neutral-contrast-medium;
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+}
+
+.payment {
+  color:$p-color-brand;
+  font-weight: $p-font-weight-bold;
+}
+
+.accNumber {
+  font-weight: $p-font-weight-bold;
+}
+
+.slick-prev,
 .slick-next {
-  right: 20%;
+  box-sizing: border-box;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px;
+  border: 1px solid transparent;
+  border-radius: 100px;
   z-index: 1;
 }
 
 .slick-prev {
-  left: 20%;
-  z-index: 1;
+  left:10%;
 }
 
-.slick-prev:before {
-  color:#000000;
+.slick-next {
+  right: 10%;
 }
-.slick-next:before {
-  color:#000000;
+
+.slick-prev:before,
+.slick-next:before{
+  color:$p-color-neutral-contrast-medium;
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 1px solid;
+}
+
+.slick-prev::before {
+  border-left: 1px solid;
+  transform: rotate(45deg);
+  left: 6px;
+  top: 4px;
+}
+
+.slick-next::before {
+  border-right: 1px solid;
+  transform: rotate(-45deg);
+  right: 6px;
+  top: 4px;
+}
+.slick-dots li button:before {
+  font-size: $p-font-size-12;
+}
+
+.pfs-wrapper,
+.ButtonPanel {
+  padding: $p-spacing-8 ;
 }
